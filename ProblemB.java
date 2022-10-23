@@ -19,15 +19,15 @@ public class ProblemB {
             int P = scan.nextInt(); //Number of portions that the recipe is written for.
             int D = scan.nextInt(); //Number of desired portions
             String[] name = new String[R];
-            float[] weight = new float[R];
-            float[] percentage = new float[R];
+            double[] weight = new double[R];
+            double[] percentage = new double[R];
             for (int i = 0; i < R; i++) {
                 name[i] = scan.next();
-                weight[i] = scan.nextFloat();
-                percentage[i] = scan.nextFloat();
+                weight[i] = scan.nextDouble();
+                percentage[i] = scan.nextDouble();
                 if (percentage[i] == 100.0) {
                     mainIndex = i;
-                    weight[i] *= (float) D / (float) P;
+                    weight[i] *= (double) D / (double) P;
                 }
             }
 
